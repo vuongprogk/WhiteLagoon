@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Member>
+
+<div class="w-100 card border-0 p-4">
+    <div class="card-header bg-success bg-gradient m-lg-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2">Nhóm 12</h2>
+            </div>
+        </div>
+    </div>
+    <div class="card-body border p-4">
+        
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>MSSV</th>
+                    <th>Họ và Tên</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var obj in Model)
+                {
+                    <tr>
+                        <td>@obj.MSSV</td>
+                        <td>@obj.Name</td>
+                        <td>@obj.Email</td>
+                        
+                    </tr>
+                }
+                
+            </tbody>
+        </table>
+    </div>
+</div>
